@@ -4,16 +4,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:weatherapplication/Screens/home.dart';
 
 Future<void> main() async {
-  try {
-    print('Initializing Hive...');
     await Hive.initFlutter();
-    print('Opening box...');
     await Hive.openBox('myBox');
-    print('Hive initialized and box opened successfully.');
-  } catch (e) {
-    print('Error initializing Hive: $e');
-  }
-
   runApp(MainApp());
 }
 
